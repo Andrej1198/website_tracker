@@ -1,0 +1,23 @@
+{
+  // First 3 keys are all mandatory, description is highly recommended
+  // Icons is also recommended since it allows us to specify an extension image
+  "manifest_version": 2,
+  "name": "Borderify",
+  "version": "1.0",
+
+  "description": "Adds a red border to all webpages matching mozilla.org.",
+  "icons": {
+    "48": "icons/border-48.png"
+  },
+
+  // content_scripts is an extension used to tell the browser(Firefox) what
+  // script to load onto pages which matches a URL pattern
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["borderify.js"]
+    }
+  ]
+}
+
+// https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension
