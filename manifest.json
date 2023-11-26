@@ -1,9 +1,10 @@
 {
   // First 3 keys are all mandatory, description is highly recommended
   // Icons is also recommended since it allows us to specify an extension image
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "ScreenTime",
   "version": "1.0",
+  "homepage_url": "https://github.com/Andrej1198/website_tracker",
 
   "description": "Adds a red border to all webpages matching mozilla.org.",
   "icons": {
@@ -17,7 +18,29 @@
       "matches": ["<all_urls>"],
       "js": ["log_time_website.js"]
     }
-  ]
+  ],
+
+  "background": {
+    "scripts": ["background.js"]
+  },
+
+  "permissions": [
+    "activeTab",
+    "history",
+    "tabs"
+  ],
+
+
+  "action": {
+    "default_icon": "icons/border-48.png",
+    "theme_icons": [{
+        "light": "icons/border-48.png",
+        "dark": "icons/border-48.png",
+        "size": 32
+    }],
+    "default_title": "ScreenTime",
+    "default_popup": "ScreenTime.html"
+  }
 }
 
 // https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension
