@@ -14,10 +14,11 @@
   // script to load onto pages which matches a URL pattern
   "content_scripts": [
     {
-      "matches": ["*://*/*"],
-      "js": ["borderify.js"]
+      "matches": ["<all_urls>"],
+      "js": ["log_time_website.js"]
     }
   ]
 }
 
 // https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension
+// Find an icon from here: https://fonts.google.com/icons
