@@ -2,7 +2,7 @@
   // First 3 keys are all mandatory, description is highly recommended
   // Icons is also recommended since it allows us to specify an extension image
   "manifest_version": 2,
-  "name": "Borderify",
+  "name": "ScreenTime",
   "version": "1.0",
 
   "description": "Adds a red border to all webpages matching mozilla.org.",
